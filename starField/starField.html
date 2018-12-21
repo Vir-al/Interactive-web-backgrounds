@@ -6,9 +6,65 @@
     <title>Starfield - Viral Limbani</title>
     <link href="../assets/canvas.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Tool box CDNs
+      Available at assets folder in this repository -->
+    <link rel="stylesheet" type="text/css" href="https://ToolBox-CDN--vir-al.repl.co/toolbox.css"> 
+    <script type="text/javascript" src="https://ToolBox-CDN--vir-al.repl.co/toolbox.js"></script>
+
+    <script type="text/javascript" src="toolbox-helper.js"></script>
   </head>
   <body>
     <script type="text/javascript" src="starField.js"></script>
+    <div class="property-container">
+      <div class="title"><center><h4>Play here</h4></center></div>
+      <div class="property-values">
+        <hr>
+        <div class="property">
+          <label name="speed">Speed of star :</label>
+          <input type="number" name="speed" class="speed" disabled="disabled" value="0.9">
+          <input class="slider-speed custom-range" type="range" min="0" max="50" step="1">
+        </div>
+      </div>
+      
+      <div class="property-values">
+        <hr>
+        <div class="property">
+          <label name="nop">Number of stars :</label>
+          <input type="number" name="nop" class="nop" disabled="disabled" value="50">
+          <input class="slider-nop custom-range" type="range" min="20" max="1000" step="1">
+        </div>
+      </div>
+
+      <div class="property-values">
+        <hr>
+        <div class="custom-control custom-checkbox property">
+          <input type="checkbox" name="origin-move" class="origin-move custom-control-input"  id="defaultUnchecked">
+          <label name="origin-move" for="defaultUnchecked" class="custom-control-label">Move origin with mouse </label>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-full reset-origin">Reset origin</button>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-full show-line" data-status="hide">Hide Line behind stars</button>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 0;">
+      <div class="toggle-button" data-status="up"><center><span class="glyphicon glyphicon-chevron-up"></span></center></div>
+    </div>    
+
+    <script type="text/javascript">
+      
+    </script>
   </body>
 </html>
