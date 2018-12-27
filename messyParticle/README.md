@@ -26,11 +26,17 @@ There are functions as below.
 There is an array called `shapes` in main.js file which contains `totalParticle`. Each particle is randomly assign to particular position and different acutal location.
 
 ## Parameters to play with
+There is a toolbox available for live demo website, you can twist the value of parameters and see the instant changes there. The parameters covered are as follows:
+
 * Total particles
   - You can change the number of particles by changing the value of `totalParticle` at line number 2 in main.js file.
+* Mouse repulse distance
+  - The minimum distance between particle and mouse required to apply the repulsive force
+* Opacity of particles
+  - The visibility of particle
 * Number of particles added on Mouse click
   - You can change the number of particles to be added when user clicks the mouse by changing the value of `addParticle` at line number 3 in main.js file.
-And you can also twist the size and colors of the particles.
+And you can also twist the size and colors of the particles manually.
 
 ## Preview
 ![Messy Particle preview](https://raw.githubusercontent.com/Vir-al/Interactive-web-backgrounds/master/previews/messyParticles.gif "Messy Particles")

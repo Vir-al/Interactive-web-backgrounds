@@ -5,9 +5,76 @@
     <title>Messy particles - Viral Limbani</title>
     <link href="../assets/canvas.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Tool box CDNs
+      Available at assets folder in this repository -->
+    <link rel="stylesheet" type="text/css" href="https://ToolBox-CDN--vir-al.repl.co/toolbox.css">
+    <script type="text/javascript" src="https://ToolBox-CDN--vir-al.repl.co/toolbox.js"></script>
+
+    <script type="text/javascript" src="toolbox-helper.js"></script>
 <body>
   <script type="text/javascript" src="shape.js"></script>
   <script type="text/javascript" src="main.js"></script>
+  <div class="property-container">
+      <div class="title"><center><h4>Play here</h4></center></div>
+      <div class="property-values">
+        <hr>
+        <div class="property">
+          <label name="nop">Number of particles :</label>
+          <input type="number" name="nop" class="nop" disabled="disabled" value="50">
+          <input class="slider-nop custom-range" type="range" min="20" max="180" step="1">
+        </div>
+      </div>
+
+      <div class="property-values">
+        <hr>
+        <div class="property">
+          <label name="repulse">Mouse Repulse distance :</label>
+          <input type="number" name="repulse" class="repulse" disabled="disabled" value="0.9">
+          <input class="slider-repulse custom-range" type="range" min="0" max="200" step="1">
+        </div>
+      </div>
+
+      <div class="property-values">
+        <hr>
+        <div class="property">
+          <label name="opacity">Opacity of particles :</label>
+          <input type="number" name="opacity" class="opacity" disabled="disabled" value="0.9">
+          <input class="slider-opacity custom-range" type="range" min="0" max="255" step="1">
+        </div>
+      </div>
+
+      <div class="property-values">
+        <hr>
+        <div class="property">
+          <label name="addParticles">Particles to add on click :</label>
+          <input type="number" name="addParticles" class="addParticles" disabled="disabled" value="0.9">
+          <input class="slider-addParticles custom-range" type="range" min="1" max="15" step="1">
+        </div>
+      </div>
+
+      <div class="property-values">
+        <hr>
+        <div class="custom-control custom-checkbox property">
+	      	<label class="container">Add particles on mouse click
+			  <input type="checkbox" class="toAddParticles">
+			  <span class="checkmark"></span>
+			</label>
+			<label class="container">Repulse at pointer
+			  <input type="checkbox" class="toRepulse" checked="checked">
+			  <span class="checkmark"></span>
+			</label>
+	    </div>
+      </div>
+
+      <hr style="margin-bottom: 0;">
+      <div class="toggle-button" data-status="up"><center><span class="glyphicon glyphicon-chevron-up"></span></center></div>
+    </div> 
 </body>
 </html>

@@ -25,8 +25,10 @@ function Shape(x,y){
 
 	this.behaviour = function(){
 		let steer = this.locate();
-		let repulseForce = this.mouseRepulse();
-		this.applyForce(repulseForce);
+		if(toRepulse){
+			let repulseForce = this.mouseRepulse();
+			this.applyForce(repulseForce);
+		}
 		this.applyForce(steer);
 	}
 
@@ -46,7 +48,7 @@ function Shape(x,y){
 	this.mouseRepulse = function(){
 		let desired = p5.Vector.sub(createVector(mouseX,mouseY),this.pos);
 		let dist = desired.mag();
-		if(dist < 150){
+		if(dist < repulseDistance){
 			desired.setMag(10);
 			desired.mult(-1);
 			let repulseForce = p5.Vector.sub(desired,this.vel);
@@ -60,7 +62,7 @@ function Shape(x,y){
 
 	this.show = function(){
 		noStroke();
-		fill(this.color.r,this.color.g,this.color.b,100);
+		fill(this.color.r,this.color.g,this.color.b,opacity);
 		ellipse(this.pos.x, this.pos.y, this.r*2 , this.r*2);
 	}
 }
